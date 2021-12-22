@@ -11,12 +11,16 @@
 //var speakWord = "Hello";
 
 
-(function speak(name){
+(function (window){
   var helloSpeaker = {};
   var speakWord = "Hello";
-  console.log(speakWord + " " + name);
-  
+
+  helloSpeaker.speak = function (x) {
+  console.log(speakWord + " " + x);
+  }
+
   window.helloSpeaker = helloSpeaker;
+  
 })(window);
 
 // STEP 4: Rewrite the 'speak' function such that it is attached to the
